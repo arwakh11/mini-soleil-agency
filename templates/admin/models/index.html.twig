@@ -1,0 +1,38 @@
+{% extends '@EasyAdmin/crud/index.html.twig' %}
+
+{% block datagrid %}
+    <div class="row g-4">
+        {% for model in entities %}
+            <div class="col-6 col-sm-6 col-lg-4 col-xl-3">
+                <div class="card h-100 shadow-sm">
+                    <img
+                        src="{{ asset('uploads/' ~ model.instance.photo) }}"
+                        class="card-img-top"
+                        style="height: 350px; object-fit: cover;"
+                        alt="{{ model.instance.name }}"
+                    >
+                    <div class="card-body">
+                        <h5 class="card-title">{{ model.instance.name }}</h5>
+                        <p>Instagram:  <br><strong>{{ model.instance.instagram }}</strong></p>
+                        {% if model.instance.price %}
+                            <p class="text-muted">{{ model.instance.price }}</p>
+                        {% endif %}
+                        <a
+                            href="{{ ea_url()
+                    .setController('App\\Controller\\Admin\\ModelsCrudController')
+                    .setAction('detail')
+                    .setEntityId(model.primaryKeyValue)
+                }}"
+                            class="btn btn-secondary w-100"
+                        >
+                            <i class="fa fa-eye"></i>
+                            View
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+

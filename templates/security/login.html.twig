@@ -1,0 +1,135 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'login.page_title'|trans }}
+{% endblock %}
+
+{% block body %}
+	<main class="min-h-screen bg-primary flex items-center justify-center px-4 py-10 sm:py-14 font-sans">
+		<div
+			class="w-full max-w-md">
+
+			{# HEADER #}
+			<header class="text-center mb-8 sm:mb-10">
+				<span class="inline-block text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+					{{ 'login.welcome_back'|trans }}
+				</span>
+
+				<h1 class="font-serif text-4xl sm:text-5xl text-background-light leading-tight">
+					{{ 'login.good_to'|trans }}
+					<span class="italic text-accent">
+						{{ 'login.see_you'|trans }}
+					</span>
+				</h1>
+			</header>
+
+			{# FORM CARD #}
+			<section
+				class="bg-background rounded-2xl shadow-xl p-6 sm:p-8 md:p-10">
+
+				{# SECTION TITLE #}
+				<div class="flex items-center gap-3 mb-8">
+					<span class="w-2 h-2 rotate-45 bg-accent shrink-0"></span>
+
+					<h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-primary">
+						{{ 'login.your_details'|trans }}
+					</h2>
+
+					<span class="h-px flex-1 bg-primary/10"></span>
+				</div>
+
+				{# LOGIN ERROR #}
+				{% if error %}
+					<div class="mb-6 rounded-lg border border-secondary/30 bg-secondary/10 px-4 py-3 text-sm text-secondary" role="alert">
+						{{ error.messageKey|trans(error.messageData, 'security') }}
+					</div>
+				{% endif %}
+
+				{# ALREADY LOGGED IN #}
+				{% if app.user %}
+					<div class="mb-6 rounded-lg bg-primary/5 px-4 py-3 text-sm text-primary">
+						{{ 'login.logged_in_as'|trans }}
+						<strong class="break-words">
+							{{ app.user.userIdentifier }}
+						</strong>.
+
+						<a href="{{ logout_path() }}" class="font-semibold text-secondary hover:underline">
+							{{ 'login.logout'|trans }}
+						</a>
+					</div>
+				{% endif %}
+
+				<form
+					method="post" class="space-y-6">
+
+					{# EMAIL #}
+					<div>
+						<label for="username" class="block text-xs font-semibold tracking-wide uppercase text-primary/70 mb-2">
+							{{ 'login.email'|trans }}
+						</label>
+
+						<input type="email" value="{{ last_username }}" name="_username" id="username" autocomplete="email" required autofocus dir="auto" placeholder="{{ 'login.email_placeholder'|trans }}" class="w-full min-w-0 rounded-lg border border-primary/15
+																								                                   bg-background-light px-4 py-3 text-primary
+																								                                   placeholder:text-primary/30
+																								                                   focus:border-secondary focus:ring-2
+																								                                   focus:ring-secondary/30 focus:outline-none
+																								                                   transition">
+					</div>
+
+					{# PASSWORD #}
+					<div>
+						<label for="password" class="block text-xs font-semibold tracking-wide uppercase text-primary/70 mb-2">
+							{{ 'login.password'|trans }}
+						</label>
+
+						<input type="password" name="_password" id="password" autocomplete="current-password" required dir="app.request.locale" starts with 'ar' ? 'rtl' : 'ltr' placeholder="{{ 'login.password_placeholder'|trans }}" class="w-full min-w-0 rounded-lg border border-primary/15
+																								                                   bg-background-light px-4 py-3 text-primary
+																								                                   placeholder:text-primary/30
+																								                                   focus:border-secondary focus:ring-2
+																								                                   focus:ring-secondary/30 focus:outline-none
+																								                                   transition">
+					</div>
+
+					{# FORGOT PASSWORD LINK #}
+					<div class="flex justify-end -mt-3">
+						<a href="{{ path('app_forgot_password_request') }}" class="text-sm font-semibold text-secondary
+																               hover:text-primary transition
+																               underline-offset-4 hover:underline">
+							{{ 'login.forgot_password'|trans }}
+						</a>
+					</div>
+
+					<input
+					type="hidden" name="_csrf_token" data-controller="csrf-protection" value="{{ csrf_token('authenticate') }}">
+
+					{# SUBMIT #}
+					<div class="pt-2">
+						<button type="submit" class="w-full inline-flex items-center justify-center
+																																                                   bg-secondary hover:bg-accent-dark
+																																                                   text-background-light font-semibold text-sm
+																																                                   tracking-wide py-3.5 px-8 rounded-full
+																																                                   transition duration-200 cursor-pointer
+																																                                   focus:outline-none focus:ring-2
+																																                                   focus:ring-accent focus:ring-offset-2
+																																                                   focus:ring-offset-background">
+							{{ 'login.sign_in'|trans }}
+						</button>
+					</div>
+
+				</form>
+
+				{# REGISTER LINK #}
+				<div class="mt-8 pt-6 border-t border-primary/10 text-center">
+					<p class="text-sm text-primary/70">
+						{{ 'login.no_account'|trans }}
+
+						<a href="{{ path('app_register') }}" class="font-semibold text-secondary hover:text-primary transition">
+							{{ 'login.create_account'|trans }}
+						</a>
+					</p>
+				</div>
+
+			</section>
+		</div>
+	</main>
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'reset.request_title'|trans }}
+{% endblock %}
+
+{% block body %}
+	<main class="min-h-screen bg-primary flex items-center justify-center px-4 py-10 sm:py-14 font-sans">
+		<div
+			class="w-full max-w-md">
+
+			{# HEADER #}
+			<header class="text-center mb-8 sm:mb-10">
+				<span class="inline-block text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+					{{ 'reset.eyebrow'|trans }}
+				</span>
+
+				<h1 class="font-serif text-4xl sm:text-5xl text-background-light leading-tight">
+					{{ 'reset.forgot_title'|trans }}
+					<span class="italic text-accent">
+						{{ 'reset.forgot_highlight'|trans }}
+					</span>
+				</h1>
+
+				<p class="text-background-light/70 text-sm mt-4 leading-relaxed max-w-sm mx-auto">
+					{{ 'reset.request_description'|trans }}
+				</p>
+			</header>
+
+			{# FORM CARD #}
+			<section
+				class="bg-background rounded-2xl shadow-xl p-6 sm:p-8 md:p-10">
+
+				{# SECTION TITLE #}
+				<div class="flex items-center gap-3 mb-8">
+					<span class="w-2 h-2 rotate-45 bg-accent shrink-0"></span>
+
+					<h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-primary">
+						{{ 'reset.your_details'|trans }}
+					</h2>
+
+					<span class="h-px flex-1 bg-primary/10"></span>
+				</div>
+
+				{# ERRORS #}
+				{% for flash_error in app.flashes('reset_password_error') %}
+					<div class="mb-6 rounded-lg border border-secondary/30 bg-secondary/10 px-4 py-3 text-sm text-secondary" role="alert">
+						{{ flash_error }}
+					</div>
+				{% endfor %}
+
+				{# EMAIL FORM #}
+				{{ form_start(requestForm, {
+                    attr: {
+                        class: 'space-y-6'
+                    }
+                }) }}
+
+				<div>
+					{{ form_label(requestForm.email, 'reset.email'|trans, {
+                            label_attr: {
+                                class: 'block text-xs font-semibold tracking-wide uppercase text-primary/70 mb-2'
+                            }
+                        }) }}
+
+					{{ form_widget(requestForm.email, {
+                            attr: {
+                                class: 'w-full min-w-0 rounded-lg border border-primary/15 bg-background-light px-4 py-3 text-primary placeholder:text-primary/30 focus:border-secondary focus:ring-2 focus:ring-secondary/30 focus:outline-none transition',
+                                placeholder: 'reset.email_placeholder'|trans,
+                                dir: 'auto',
+                                autocomplete: 'email'
+                            }
+                        }) }}
+
+					{{ form_errors(requestForm.email) }}
+				</div>
+
+				<p class="text-sm text-primary/60 leading-relaxed">
+					{{ 'reset.request_help'|trans }}
+				</p>
+
+				<div class="pt-2">
+					<button class="w-full inline-flex items-center justify-center bg-secondary hover:bg-accent-dark text-background-light font-semibold text-sm tracking-wide py-3.5 px-8 rounded-full transition duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background">
+						{{ 'reset.send_email'|trans }}
+					</button>
+				</div>
+
+				{{ form_end(requestForm) }}
+
+				{# BACK TO LOGIN #}
+				<div class="mt-8 pt-6 border-t border-primary/10 text-center">
+					<a href="{{ path('app_login') }}" class="text-sm font-semibold text-secondary hover:text-primary transition">
+						{{ 'reset.back_to_login'|trans }}
+					</a>
+				</div>
+
+			</section>
+		</div>
+	</main>
+{% endblock %}

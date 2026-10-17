@@ -1,0 +1,280 @@
+welcome.title: "Mini Soleil Agency"
+footer.copyright: "All rights reserved."
+
+nav:
+  home: "Home"
+  contact: "Contact"
+  menu: "Open navigation menu"
+  language: "Language"
+  legal: "Legal Notice"
+
+home:
+    page_title: "Mini Soleil — Creative Production Agency"
+
+    hero:
+        eyebrow: "We connect you with"
+        title:
+            first_line:
+                Europe's
+            accent:
+                finest 
+            second_line:  
+                talents
+        description: |
+            To bring your vision to life,
+            effortlessly and beautifully.
+        cta: "Book Your Shoot →"
+        editorial: "Creative Direction • Photography • Videography • Styling • UGC"
+        image_alt: "Mini Soleil creative production"
+
+    introduction:
+        text: |
+            Mini Soleil is a creative production
+            agency crafting premium visual
+            experiences for ambitious brands.
+        image_alt: "Creative production"
+
+    create_more:
+        title: |
+            We
+            Create
+            More
+            Than
+            Content.
+        description: |
+            From concept to final delivery,
+            we're bringing Europe's creative
+            talent together to produce
+            imagery that feels authentic,
+            premium, and commercially powerful.
+        image_alt: "Creative photography"
+
+    why_choose_us:
+        eyebrow: "Everything your brand needs"
+        title: "Why choose us?"
+
+        save_time:
+            title: |
+                Save
+                Time
+            description: |
+                From creative planning and mood boards
+                to production, styling, photography,
+                and editing, we manage the entire
+                process so you can focus on your business.
+            image_alt: "Save time with Mini Soleil"
+
+        global_quality:
+            title: |
+                Global
+                Quality
+            description: |
+                Access Europe's top creative
+                professionals without spending
+                months finding the right team.
+            image_alt: "European creative talent"
+
+        built_to_convert:
+            title: |
+                Built
+                to Convert
+            description: |
+                Beautiful visuals are only part of
+                the equation. Every image and video
+                is designed to communicate your brand
+                and move your audience.
+            image_alt: "Content built to convert"
+
+    final_cta:
+        eyebrow: "Your next production starts here"
+        title: |
+            Ready
+            to
+            Elevate
+            Your
+            Brand?
+        description: |
+            Let's create visuals that make
+            your brand feel unforgettable.
+        cta: "Book Your Project"
+        arrow:  "→"
+        image_alt: "Mini Soleil production"
+
+
+contact:
+  page_title: "Contact"
+  get_in_touch: "Get In Touch"
+  tell_us_about: "Tell us about your"
+  vision: "vision"
+  intro: "Share a few details and we'll match you with the right creative team to bring it to life."
+
+
+
+quote_request:
+    title: "Tell us about your project"
+    description: "The information you provide helps us prepare an accurate quote."
+    your_details: "Your Details"
+    project_details: "Project Details"
+    product_details: "Product Details"
+    creative_vision: "Creative Vision"
+    fields:
+        full_name: "Full Name"
+        phone_number: "Phone Number"
+        email: "E-mail"
+
+        shoot_type:
+            label: "Do you want the photoshoot to be personal or tailored for your brand?"
+            choices:
+                personal: "Personal"
+                brand: "Brand"
+
+        brand_name:
+            label: "Brand Name"
+
+        instagram_account:
+            label: "Instagram Account"
+
+        contact_preference:
+            label: "Where do you prefer to be contacted?"
+            choices:
+                email: "Email"
+                whatsapp: "WhatsApp"
+
+        media_type:
+            label: "Are you interested in photo or video production?"
+            choices:
+                photos: "Photos"
+                videos: "Videos"
+                both: "Both"
+
+        content_quantity:
+            label: "How many photos / videos would you like for your shoot?"
+            help: "3 photos, 5 videos, 10 horizontal photos…"
+
+        number_of_items:
+            label: "How many items would you like to shoot?"
+            help: "5 clothing items, 10 beauty products…"
+
+        product_type:
+            label: "What type of products does your brand offer?"
+            help: "Clothing, beauty/care products, accessories, other…"
+
+        creative_description:
+            label: "Please describe the type of photos or videos you’d like for your brand, including the desired atmosphere, location, and emotion."
+            help: "This will help us provide the best creative direction and visuals for you."
+
+        start_date:
+            label: "When would you like to start?"
+
+    submit: "Book Your Shoot"
+
+
+login:
+  page_title: "Sign In"
+  welcome_back: "Welcome Back"
+  good_to: "Good to"
+  see_you: "see you"
+  your_details: "Your Details"
+  logged_in_as: "You are logged in as"
+  logout: "Logout"
+  email: "Email"
+  email_placeholder: "you@example.com"
+  password: "Password"
+  password_placeholder: "Enter your password"
+  sign_in: "Sign In"
+  no_account: "Don't have an account?"
+  create_account: "Create one"
+  forgot_password: "Forgot your password?"
+
+register:
+    page_title: "Create Account"
+    join_us: "Join Us"
+    create_your: "Create your"
+    account: "account"
+    email: "Email"
+    your_details: "Your Details"
+    password: "Password"
+    confirm_password: "Confirm Password"
+    create_account: "Create Account"
+    already_account: "Already have an account?"
+    sign_in: "Sign in"
+
+
+
+reset:
+    request_title: "Forgot your password?"
+    eyebrow: "Mini Soleil Agency"
+    forgot_title: "Forgot"
+    forgot_highlight: "your password?"
+    request_description: "No worries. Enter your email address and we'll send you a link to reset your password."
+    your_details: "Your details"
+    email: "Email address"
+    email_placeholder: "Enter your email address"
+    request_help: "We'll send you a secure link if an account exists with this email address."
+    send_email: "Send reset link"
+    back_to_login: "Back to sign in"
+
+    new_password_title: "Create a new password"
+    new_title: "Create a"
+    new_highlight: "new password"
+    new_description: "Choose a new password to securely access your account."
+    new_password: "New password"
+    password_placeholder: "Enter your new password"
+    reset_password: "Reset password"
+    confirm_password: "Confirm password"
+    confirm_password_placeholder: "Re-enter your new password"
+
+
+    email_sent_title: "Password reset email sent"
+    email_sent_heading: "Check your"
+    email_sent_highlight: "inbox"
+    check_email: "Email confirmation"
+    email_sent_message: "If an account matching your email exists, an email has been sent with a link to reset your password."
+    link_expires: "Link expires in"
+    check_spam: "If you don't receive an email, check your spam folder or try again."
+    try_again: "Try again"
+
+legal:
+  title: "Legal Notice"
+  updated: "Last updated: 15 October 2026"
+  sections:
+    publisher:
+      title: "Website publisher"
+      content: |-
+        Legal company name: [to be completed]
+        Legal form: [to be completed]
+        Registered office: [full address]
+        SIREN / SIRET: [to be completed]
+        Publication director: [name]
+        Contact: [business email]
+    hosting:
+      title: "Hosting"
+      content: |-
+        The website is currently being developed in a local environment. The hosting provider's details will be added when the website is deployed.
+    intellectual_property:
+      title: "Intellectual property"
+      content: |-
+        The website's text, photographs, graphics, logos and other content are protected by applicable intellectual property laws. Unauthorized use is prohibited, subject to legal exceptions and third-party rights.
+    liability:
+      title: "Liability"
+      content: |-
+        Mini Soleil endeavours to keep the website's information accurate and up to date. Errors or omissions may nevertheless occur.
+    personal_data:
+      title: "Personal data"
+      content: |-
+        Information submitted through the quote request form is used to review and manage requests and communicate with the people concerned.
+        Data controller: [legal identity]
+        Privacy contact: [email address]
+        Legal basis, retention period, recipients and how to exercise data rights: [complete according to actual processing].
+        You may also lodge a complaint with the CNIL.
+    cookies:
+      title: "Cookies and trackers"
+      content: |-
+        Based on the currently known project configuration, the website does not use audience analytics or advertising tracking tools. Actual cookies and services must be verified before launch.
+    law:
+      title: "Applicable law"
+      content: |-
+        This legal notice is governed by French law, subject to applicable mandatory rules.
+
+  intro: "Legal information about Mini Soleil and the use of this website."
+  footer: "Thoughtfully created."

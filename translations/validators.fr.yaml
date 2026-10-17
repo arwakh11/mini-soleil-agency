@@ -1,0 +1,17 @@
+register:
+    errors:
+        email_required: "Veuillez saisir votre adresse e-mail."
+        email_invalid: "Veuillez saisir une adresse e-mail valide."
+        password_required: "Veuillez saisir un mot de passe."
+        password_too_short: "Votre mot de passe doit contenir au moins {{ limit }} caractères."
+        password_mismatch: "Les mots de passe ne correspondent pas."
+
+
+quote_request:
+    errors:
+        full_name_required: "Le nom complet est requis."
+        phone_number_required: "Le numéro de téléphone est requis."
+        email_required: "L'adresse e-mail est requise."
+        email_invalid: "Veuillez saisir une adresse e-mail valide."
+        start_date_invalid: "La date de début ne peut pas être avant demain."
+        creative_description_required: "Ce champ est requis."

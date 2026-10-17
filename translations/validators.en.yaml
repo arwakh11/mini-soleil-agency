@@ -1,0 +1,16 @@
+register:
+    errors:
+        email_required: "Please enter your email address."
+        email_invalid: "Please enter a valid email address."
+        password_required: "Please enter a password."
+        password_too_short: "Your password must be at least {{ limit }} characters."
+        password_mismatch: "The passwords do not match."
+
+quote_request:
+    errors:
+        full_name_required: "Full name is required."
+        phone_number_required: "Phone number is required."
+        email_required: "Email is required."
+        email_invalid: "Please enter a valid email address."
+        start_date_invalid: "The start date cannot be before tomorrow."
+        creative_description_required: "This field is required."

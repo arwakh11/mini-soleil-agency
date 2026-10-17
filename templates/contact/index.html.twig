@@ -1,0 +1,579 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'contact.page_title'|trans }}
+{% endblock %}
+
+{% block body %}
+
+    <main class="min-h-screen bg-primary px-4 py-10 sm:py-14 font-sans">
+
+        <div
+            class="w-full max-w-3xl mx-auto"
+        >
+
+            {# ============================================================
+												               PAGE INTRO
+												               ============================================================ #}
+
+            <header class="text-center mb-8 sm:mb-10">
+
+                <span
+                    class="inline-block text-accent text-xs font-semibold
+																								                           tracking-[0.2em] uppercase mb-4"
+                >
+                    {{ 'contact.get_in_touch'|trans }}
+                </span>
+
+                <h1
+                    class="font-serif text-4xl sm:text-5xl
+																								                           text-background-light leading-tight"
+                >
+                    {{ 'contact.tell_us_about'|trans }}
+
+                    <span class="italic text-accent">
+                        {{ 'contact.vision'|trans }}
+                    </span>
+                </h1>
+
+                <p
+                    class="text-background-light/75 mt-4
+																								                           max-w-xl mx-auto text-sm sm:text-base
+																								                           leading-relaxed"
+                >
+                    {{ 'contact.intro'|trans }}
+                </p>
+
+            </header>
+
+
+            {# ============================================================
+												               FORM CARD
+												               ============================================================ #}
+
+            {{ form_start(form, {
+                attr: {
+                    class: 'w-full bg-background rounded-2xl shadow-xl
+                            p-6 sm:p-8 md:p-10 space-y-10'
+                }
+            }) }}
+
+
+            {# ============================================================
+												               FORM INTRO
+												               ============================================================ #}
+
+            <div class="text-center md:text-start">
+
+                <h2 class="font-serif text-2xl sm:text-3xl text-primary">
+                    {{ 'quote_request.title'|trans }}
+                </h2>
+
+                <p class="text-primary/60 text-sm mt-2 leading-relaxed">
+                    {{ 'quote_request.description'|trans }}
+                </p>
+
+            </div>
+
+
+            {# ============================================================
+												               YOUR DETAILS
+												               ============================================================ #}
+
+            <section class="space-y-6">
+
+                <div class="flex items-center gap-3">
+
+                    <span class="w-2 h-2 rotate-45 bg-accent shrink-0"></span>
+
+                    <h3
+                        class="text-xs sm:text-sm font-semibold
+																												                               tracking-[0.15em] uppercase text-primary"
+                    >
+                        {{ 'quote_request.your_details'|trans }}
+                    </h3>
+
+                    <span class="h-px flex-1 bg-primary/10"></span>
+
+                </div>
+
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-5"
+                >
+
+                    {# FULL NAME #}
+                    <div>
+                        {{ form_label(form.fullName, null, {
+                            label_attr: {
+                                class: 'block text-xs font-semibold
+                                        tracking-wide uppercase
+                                        text-primary/70 mb-2'
+                            }
+                        }) }}
+
+                        {{ form_widget(form.fullName, {
+                            attr: {
+                                dir: 'auto',
+                                class: 'w-full min-w-0 rounded-lg
+                                        border border-primary/15
+                                        bg-background-light px-4 py-3
+                                        text-primary
+                                        placeholder:text-primary/30
+                                        focus:border-secondary
+                                        focus:ring-2 focus:ring-secondary/30
+                                        focus:outline-none transition'
+                            }
+                        }) }}
+
+                        <div class="mt-1 text-sm text-secondary">
+                            {{ form_errors(form.fullName) }}
+                        </div>
+                    </div>
+
+
+                    {# PHONE #}
+                    <div>
+                        {{ form_label(form.phoneNumber, null, {
+                            label_attr: {
+                                class: 'block text-xs font-semibold
+                                        tracking-wide uppercase
+                                        text-primary/70 mb-2'
+                            }
+                        }) }}
+
+                        {{ form_widget(form.phoneNumber, {
+                            attr: {
+                                dir: 'ltr',
+                                class: 'w-full min-w-0 rounded-lg
+                                        border border-primary/15
+                                        bg-background-light px-4 py-3
+                                        text-primary
+                                        placeholder:text-primary/30
+                                        focus:border-secondary
+                                        focus:ring-2 focus:ring-secondary/30
+                                        focus:outline-none transition'
+                            }
+                        }) }}
+
+                        <div class="mt-1 text-sm text-secondary">
+                            {{ form_errors(form.phoneNumber) }}
+                        </div>
+                    </div>
+
+
+                    {# EMAIL #}
+                    <div>
+                        {{ form_label(form.email, null, {
+                            label_attr: {
+                                class: 'block text-xs font-semibold
+                                        tracking-wide uppercase
+                                        text-primary/70 mb-2'
+                            }
+                        }) }}
+
+                        {{ form_widget(form.email, {
+                            attr: {
+                                dir: 'ltr',
+                                autocomplete: 'email',
+                                class: 'w-full min-w-0 rounded-lg
+                                        border border-primary/15
+                                        bg-background-light px-4 py-3
+                                        text-primary
+                                        placeholder:text-primary/30
+                                        focus:border-secondary
+                                        focus:ring-2 focus:ring-secondary/30
+                                        focus:outline-none transition'
+                            }
+                        }) }}
+
+                        <div class="mt-1 text-sm text-secondary">
+                            {{ form_errors(form.email) }}
+                        </div>
+                    </div>
+
+
+                    {# INSTAGRAM #}
+                    <div>
+                        {{ form_label(form.instagramAccount, null, {
+                            label_attr: {
+                                class: 'block text-xs font-semibold
+                                        tracking-wide uppercase
+                                        text-primary/70 mb-2'
+                            }
+                        }) }}
+
+                        {{ form_widget(form.instagramAccount, {
+                            attr: {
+                                dir: 'ltr',
+                                class: 'w-full min-w-0 rounded-lg
+                                        border border-primary/15
+                                        bg-background-light px-4 py-3
+                                        text-primary
+                                        placeholder:text-primary/30
+                                        focus:border-secondary
+                                        focus:ring-2 focus:ring-secondary/30
+                                        focus:outline-none transition'
+                            }
+                        }) }}
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            {# ============================================================
+												               PROJECT DETAILS
+												               ============================================================ #}
+
+            <section class="space-y-6">
+
+                <div class="flex items-center gap-3">
+
+                    <span class="w-2 h-2 rotate-45 bg-accent shrink-0"></span>
+
+                    <h3
+                        class="text-xs sm:text-sm font-semibold
+																												                               tracking-[0.15em] uppercase text-primary"
+                    >
+                        {{ 'quote_request.project_details'|trans }}
+                    </h3>
+
+                    <span class="h-px flex-1 bg-primary/10"></span>
+
+                </div>
+
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-5"
+                >
+
+                    {# SHOOT TYPE #}
+                    <div>
+                        {{ form_label(form.shootType, null, {
+                            label_attr: {
+                                class: 'block text-xs font-semibold
+                                        tracking-wide uppercase
+                                        text-primary/70 mb-2'
+                            }
+                        }) }}
+
+                        {{ form_widget(form.shootType, {
+                            attr: {
+                                class: 'w-full min-w-0 rounded-lg
+                                        border border-primary/15
+                                        bg-background-light px-4 py-3
+                                        text-primary
+                                        focus:border-secondary
+                                        focus:ring-2 focus:ring-secondary/30
+                                        focus:outline-none transition'
+                            }
+                        }) }}
+                    </div>
+
+
+                    {# MEDIA TYPE #}
+                    <div>
+                        {{ form_label(form.mediaType, null, {
+                            label_attr: {
+                                class: 'block text-xs font-semibold
+                                        tracking-wide uppercase
+                                        text-primary/70 mb-2'
+                            }
+                        }) }}
+
+                        {{ form_widget(form.mediaType, {
+                            attr: {
+                                class: 'w-full min-w-0 rounded-lg
+                                        border border-primary/15
+                                        bg-background-light px-4 py-3
+                                        text-primary
+                                        focus:border-secondary
+                                        focus:ring-2 focus:ring-secondary/30
+                                        focus:outline-none transition'
+                            }
+                        }) }}
+                    </div>
+
+
+                    {# CONTACT PREFERENCE #}
+                    <div>
+                        {{ form_label(form.contactPreference, null, {
+                            label_attr: {
+                                class: 'block text-xs font-semibold
+                                        tracking-wide uppercase
+                                        text-primary/70 mb-2'
+                            }
+                        }) }}
+
+                        {{ form_widget(form.contactPreference, {
+                            attr: {
+                                class: 'w-full min-w-0 rounded-lg
+                                        border border-primary/15
+                                        bg-background-light px-4 py-3
+                                        text-primary
+                                        focus:border-secondary
+                                        focus:ring-2 focus:ring-secondary/30
+                                        focus:outline-none transition'
+                            }
+                        }) }}
+                    </div>
+
+
+                    {# START DATE #}
+                    <div>
+                        {{ form_label(form.startDate, null, {
+                            label_attr: {
+                                class: 'block text-xs font-semibold
+                                        tracking-wide uppercase
+                                        text-primary/70 mb-2'
+                            }
+                        }) }}
+
+                        {{ form_widget(form.startDate, {
+                            attr: {
+                                dir: 'ltr',
+                                class: 'w-full min-w-0 rounded-lg
+                                        border border-primary/15
+                                        bg-background-light px-4 py-3
+                                        text-primary
+                                        focus:border-secondary
+                                        focus:ring-2 focus:ring-secondary/30
+                                        focus:outline-none transition'
+                            }
+                        }) }}
+
+                        
+                        <div class="mt-1 text-sm text-secondary">
+                            {{ form_errors(form.startDate) }}
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            {# ============================================================
+												               PRODUCT DETAILS
+												               ============================================================ #}
+
+            <section class="space-y-6">
+
+                <div class="flex items-center gap-3">
+
+                    <span class="w-2 h-2 rotate-45 bg-accent shrink-0"></span>
+
+                    <h3
+                        class="text-xs sm:text-sm font-semibold
+																												                               tracking-[0.15em] uppercase text-primary"
+                    >
+                        {{ 'quote_request.product_details'|trans }}
+                    </h3>
+
+                    <span class="h-px flex-1 bg-primary/10"></span>
+
+                </div>
+
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-5"
+                >
+
+                    {# BRAND NAME #}
+                    <div>
+                        {{ form_label(form.brandName, null, {
+                            label_attr: {
+                                class: 'block text-xs font-semibold
+                                        tracking-wide uppercase
+                                        text-primary/70 mb-2'
+                            }
+                        }) }}
+
+                        {{ form_widget(form.brandName, {
+                            attr: {
+                                dir: 'auto',
+                                class: 'w-full min-w-0 rounded-lg
+                                        border border-primary/15
+                                        bg-background-light px-4 py-3
+                                        text-primary
+                                        placeholder:text-primary/30
+                                        focus:border-secondary
+                                        focus:ring-2 focus:ring-secondary/30
+                                        focus:outline-none transition'
+                            }
+                        }) }}
+                    </div>
+
+
+                    {# PRODUCT TYPE #}
+                    <div>
+                        {{ form_label(form.productType, null, {
+                            label_attr: {
+                                class: 'block text-xs font-semibold
+                                        tracking-wide uppercase
+                                        text-primary/70 mb-2'
+                            }
+                        }) }}
+
+                        {{ form_widget(form.productType, {
+                            attr: {
+                                dir: app.request.locale starts with 'ar' ? 'rtl' : 'ltr',
+                                class: 'w-full min-w-0 rounded-lg
+                                        border border-primary/15
+                                        bg-background-light px-4 py-3
+                                        text-primary
+                                        placeholder:text-primary/30
+                                        focus:border-secondary
+                                        focus:ring-2 focus:ring-secondary/30
+                                        focus:outline-none transition'
+                            }
+                        }) }}
+                    </div>
+
+
+                    {# CONTENT QUANTITY #}
+                    <div>
+                        {{ form_label(form.contentQuantity, null, {
+                            label_attr: {
+                                class: 'block text-xs font-semibold
+                                        tracking-wide uppercase
+                                        text-primary/70 mb-2'
+                            }
+                        }) }}
+
+                        {{ form_widget(form.contentQuantity, {
+                            attr: {
+                                dir: app.request.locale starts with 'ar' ? 'rtl' : 'ltr',
+                                class: 'w-full min-w-0 rounded-lg
+                                        border border-primary/15
+                                        bg-background-light px-4 py-3
+                                        text-primary
+                                        placeholder:text-primary/30
+                                        focus:border-secondary
+                                        focus:ring-2 focus:ring-secondary/30
+                                        focus:outline-none transition'
+                            }
+                        }) }}
+                    </div>
+
+
+                    {# NUMBER OF ITEMS #}
+                    <div>
+                        {{ form_label(form.numberOfItems, null, {
+                            label_attr: {
+                                class: 'block text-xs font-semibold
+                                        tracking-wide uppercase
+                                        text-primary/70 mb-2'
+                            }
+                        }) }}
+
+                        {{ form_widget(form.numberOfItems, {
+                            attr: {
+                                dir: app.request.locale starts with 'ar' ? 'rtl' : 'ltr',
+                                class: 'w-full min-w-0 rounded-lg
+                                        border border-primary/15
+                                        bg-background-light px-4 py-3
+                                        text-primary
+                                        placeholder:text-primary/30
+                                        focus:border-secondary
+                                        focus:ring-2 focus:ring-secondary/30
+                                        focus:outline-none transition'
+                            }
+                        }) }}
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            {# ============================================================
+												               CREATIVE VISION
+												               ============================================================ #}
+
+            <section class="space-y-6">
+
+                <div class="flex items-center gap-3">
+
+                    <span class="w-2 h-2 rotate-45 bg-accent shrink-0"></span>
+
+                    <h3
+                        class="text-xs sm:text-sm font-semibold
+																												                               tracking-[0.15em] uppercase text-primary"
+                    >
+                        {{ 'quote_request.creative_vision'|trans }}
+                    </h3>
+
+                    <span class="h-px flex-1 bg-primary/10"></span>
+
+                </div>
+
+
+                <div>
+
+                    {{ form_label(form.creativeDescription, null, {
+                        label_attr: {
+                            class: 'block text-xs font-semibold
+                                    tracking-wide uppercase
+                                    text-primary/70 mb-2'
+                        }
+                    }) }}
+
+                    {{ form_widget(form.creativeDescription, {
+                        attr: {
+                            dir: app.request.locale starts with 'ar' ? 'rtl' : 'ltr',
+                            class: 'w-full min-h-36 rounded-lg
+                                    border border-primary/15
+                                    bg-background-light px-4 py-3
+                                    text-primary
+                                    placeholder:text-primary/30
+                                    focus:border-secondary
+                                    focus:ring-2 focus:ring-secondary/30
+                                    focus:outline-none transition resize-y'
+                        }
+                    }) }}
+
+                    <div class="mt-1 text-sm text-secondary">
+                        {{ form_errors(form.creativeDescription) }}
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            {# ============================================================
+												               SUBMIT
+												               ============================================================ #}
+
+            <div class="pt-2">
+
+                {{ form_widget(form.submit, {
+                    label: 'quote_request.submit'|trans,
+                    attr: {
+                        class: 'w-full sm:w-auto
+                                inline-flex items-center justify-center
+                                bg-secondary hover:bg-accent-dark
+                                text-background-light
+                                font-semibold text-sm tracking-wide
+                                py-3.5 px-8 rounded-full
+                                transition duration-200 cursor-pointer
+                                focus:outline-none
+                                focus:ring-2 focus:ring-accent
+                                focus:ring-offset-2
+                                focus:ring-offset-background'
+                    }
+                }) }}
+
+            </div>
+
+
+            {{ form_end(form) }}
+
+        </div>
+
+    </main>
+
+{% endblock %}

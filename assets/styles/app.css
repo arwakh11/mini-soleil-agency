@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+body {
+    background-color: var(--color-primary);
+}
+
+@theme {
+    /* Brand colors */
+    --color-primary: #0c4028;
+    --color-secondary: #d87527;
+    --color-accent: #f2b542;
+
+    /* Background colors */
+    --color-background: #f3e7d5;
+    --color-background-light: #f6f0e7;
+
+    /* Additional brand colors */
+    --color-accent-dark: #d39400;
+}

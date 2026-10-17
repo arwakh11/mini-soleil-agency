@@ -1,0 +1,543 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'home.page_title'|trans }}
+{% endblock %}
+
+{% block body %}
+
+    <main class="font-sans overflow-hidden">
+
+        {# ============================================================
+       HERO
+       ============================================================ #}
+
+        <section class="relative min-h-[calc(100svh-72px)] md:min-h-[720px] bg-primary text-background-light">
+
+            {# Hero image #}
+            <div class="absolute inset-0">
+                <img
+                    src="/images/hero.jpeg"
+                    alt="Mini Soleil creative production"
+                    class="w-full h-full object-cover"
+                />
+
+                {# Green overlay #}
+                <div class="absolute inset-0 bg-primary/70"></div>
+
+                {# Slight gradient for readability #}
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-primary/20"></div>
+            </div>
+
+
+            {# Hero content #}
+            <div
+                class="relative z-10 min-h-[calc(100svh-72px)] md:min-h-[720px]
+                    max-w-7xl mx-auto px-6 sm:px-10 lg:px-16
+                    flex flex-col justify-end pb-10 sm:pb-14 lg:pb-20"
+            >
+
+                <div class="max-w-3xl">
+
+                    <p class="text-sm tracking-[0.18em] uppercase mb-4">
+                        {{ 'home.hero.eyebrow'|trans }}
+                    </p>
+
+                    <h1
+                        class="font-serif text-[3.4rem] leading-[0.88]
+                           sm:text-6xl md:text-7xl lg:text-8xl
+                           max-w-2xl"
+                    >{{ 'home.hero.title.first_line'|trans }} <br>
+                        <span class="italic text-accent">{{ 'home.hero.title.accent'|trans }}</span> 
+                        <br>{{ 'home.hero.title.second_line'|trans }}
+                    </h1>
+
+                    <p
+                        class="mt-5 max-w-sm sm:max-w-md
+                          text-sm sm:text-sm
+                          leading-relaxed text-background-light/85"
+                    >
+                        {{ 'home.hero.description'|trans }}
+                    </p>
+
+                    <a
+                        href="{{ path('contact') }}"
+                        class="inline-flex items-center gap-3 mt-7
+                           border border-background-light/70
+                           rounded-full px-5 py-2.5
+                        sm:text-xs
+                           tracking-wide
+                           hover:bg-background-light hover:text-primary
+                           transition duration-300"
+                    >
+                        {{ 'home.hero.cta'|trans }}
+                    </a>
+
+                </div>
+
+
+                {# Vertical editorial text #}
+                <div
+                    class="absolute right-4 sm:right-8 lg:right-12
+                    rtl:left-4 rtl:right-auto
+                    bottom-10 sm:bottom-14
+                    hidden sm:block
+                    [writing-mode:vertical-rl]
+                    rotate-180
+                    text-[10px]
+                    tracking-[0.12em]
+                    text-background-light/75"
+                >
+
+                    {{ 'home.hero.editorial'|trans }}
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        {# ============================================================
+       INTRODUCTION
+       ============================================================ #}
+
+        <section class="bg-background text-primary relative">
+
+            <div
+                class="px-6 sm:px-10
+               py-24 sm:py-24 md:py-28
+               text-center"
+            >
+
+                <p
+                    class="font-serif text-2xl sm:text-2xl lg:text-2xl
+                   leading-[1.35] max-w-2xl mx-auto whitespace-pre-line"
+                >
+                    {{ 'home.introduction.text'|trans }}
+                </p>
+
+            </div>
+            
+            {# Top/right image #}
+            <div
+                class="absolute top-[80%] right-0
+                            w-[50%] sm:w-[40%] lg:w-[40%]
+                            h-[410px] sm:h-[480px] lg:h-[650px] z-30 rtl:left-0  rtl:right-auto"
+            >
+
+                <img
+                    src="/images/creative-1.jpg"
+                    alt="Creative production"
+                    class="w-full h-full object-cover"
+                >
+
+            </div>
+            
+        </section>
+
+
+
+        {# ============================================================
+       CREATE MORE THAN CONTENT
+       ============================================================ #}
+
+
+
+
+        <section class="bg-primary relative">
+
+
+            <div class="max-w-7xl mx-auto ">
+
+                <div
+                    class="relative bg-primary text-background-light
+                        min-h-[900px] sm:min-h-[900px]
+                        lg:min-h-[960px]"
+                >
+
+                   
+
+                    {# Decorative vertical line + sun #}
+                    <div
+                        class="absolute left-8 sm:left-12 lg:left-20 top-0 rtl:right-8 rtl:left-auto"
+                    >
+                        {# Vertical line #}
+                        <div class="w-px h-[300px] bg-accent/80"></div>
+
+                        {# Sun #}
+                        <div
+                            class="absolute left-1/2 top-[300px] -translate-x-1/2 mt-3 w-5 h-5 sm:w-6 sm:h-6"
+                        >
+                            <svg
+                                viewBox="0 0 97.7 97.7"
+                                class="w-full h-full"
+                                aria-hidden="true"
+                            >
+                                <g fill="#f2b542">
+                                    <circle cx="48.8" cy="48.8" r="21.5"/>
+                                    <polygon points="48.8 0 44 23.5 53.7 23.5 48.8 0"/>
+                                    <polygon points="34.3 27.4 14.3 14.3 27.4 34.3 34.3 27.4"/>
+                                    <polygon points="23.5 44 0 48.8 23.5 53.7 23.5 44"/>
+                                    <polygon points="14.3 83.4 34.3 70.3 27.4 63.3 14.3 83.4"/>
+                                    <polygon points="48.8 97.7 53.7 74.2 44 74.2 48.8 97.7"/>
+                                    <polygon points="63.3 70.3 83.4 83.4 70.3 63.3 63.3 70.3"/>
+                                    <polygon points="74.2 53.7 97.7 48.8 74.2 44 74.2 53.7"/>
+                                    <polygon points="83.4 14.3 63.3 27.4 70.3 34.3 83.4 14.3"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+
+                    {# Main statement #}
+                    <div
+                        class="absolute left-8 sm:left-12 lg:left-20 top-[380px] z-20 rtl:right-8 rtl:left-auto"
+                    >
+                        <h2
+                            class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[0.92] whitespace-pre-line"
+                        >{{ 'home.create_more.title'|trans }}</h2>
+
+                        <p
+                            class="sm:text-sm
+                              leading-relaxed text-background-light/80 w-[42%] sm:w-[38%] lg:w-[30%] mt-3"
+                        >{{ 'home.create_more.description'|trans }}</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            {# Bottom image #}
+            <div
+                class="absolute top-[90%] left-0 w-[50%] sm:w-[40%] lg:w-[40%] h-[410px] sm:h-[480px] lg:h-[650px] z-30 rtl:right-0  rtl:left-auto"
+            >
+                <img
+                    src="/images/creative-2.jpeg"
+                    alt="Creative photography"
+                    class="w-full h-full object-cover"
+                >
+            </div>
+
+        </section>
+
+
+
+
+        {# ============================================================
+       WHY CHOOSE US
+       ============================================================ #}
+
+        <section class="bg-background text-primary relative">
+
+            <div
+                class="max-w-7xl mx-auto
+               px-6 sm:px-10 lg:px-16 pb-30
+               pt-100 sm:pt-100 md:pt-140 lg:pt-170"
+            >
+
+                {# Section heading #}
+                <div class="text-center">
+
+                    <p
+                        class="text-sm
+                       tracking-[0.18em]
+                       uppercase text-secondary mb-2"
+                    >
+                        {{ 'home.why_choose_us.eyebrow'|trans }}
+                    </p>
+
+                    <h2 class="font-serif text-4xl sm:text-5xl lg:text-6xl">
+                        {{ 'home.why_choose_us.title'|trans }}
+                    </h2>
+
+                    <div
+                        class="w-px h-24 sm:h-28
+                       bg-primary/70 mx-auto mt-5"
+                    >
+                    </div>
+
+                </div>
+
+
+                {# Benefits #}
+                <div class="max-w-4xl mx-auto mt-16 sm:mt-20 space-y-20 sm:space-y-28">
+
+
+                    {# ==================================================
+               BENEFIT 1
+               ================================================== #}
+
+                    <article
+                        class="grid grid-cols-1 md:grid-cols-2
+           gap-8 md:gap-14
+           items-center"
+                    >
+
+                        {# IMAGE #}
+                        <div
+                            class="flex justify-center
+               md:justify-start
+               rtl:md:justify-end
+               order-1 md:order-2
+               rtl:md:order-1"
+                        >
+                            <img
+                                src="/images/creative-3.jpeg"
+                                alt="Save time with Mini Soleil"
+                                class="w-[68%] sm:w-[55%] md:w-full
+                   max-w-[360px]
+                   aspect-[4/5]
+                   object-cover"
+                            >
+                        </div>
+
+ 
+                        {# TEXT #}
+                        <div
+                            class="md:pt-12
+               order-2 md:order-1
+               rtl:md:order-2"
+                        >
+                            <div class="flex items-start gap-3 ps-6">
+                                <div>
+                                    <p class="text-accent text-3xl">◗</p>
+
+                                    <h3 
+                                        class="font-serif text-3xl sm:text-3xl
+                           leading-tight whitespace-pre-line"
+                                    >{{ 'home.why_choose_us.save_time.title'|trans }}</h3>
+
+                                    <p
+                                        class="mt-2 sm:text-sm
+                           leading-relaxed
+                           text-primary/75 max-w-xs
+                           whitespace-pre-line"
+                                    >{{ 'home.why_choose_us.save_time.description'|trans }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+
+
+
+                    {# ==================================================
+               BENEFIT 2
+               ================================================== #}
+
+                    <article
+                        class="grid grid-cols-1 md:grid-cols-2
+           gap-8 md:gap-14
+           items-center"
+                    >
+
+                        {# IMAGE #}
+                        <div
+                            class="flex justify-center
+               md:justify-start
+               rtl:md:justify-end
+               order-1 md:order-1
+               rtl:md:order-2"
+                        >
+                            <img
+                                src="/images/creative-4.jpeg"
+                                alt="European creative talent"
+                                class="w-[68%] sm:w-[55%] md:w-full
+                   max-w-[360px]
+                   aspect-[4/5]
+                   object-cover"
+                            >
+                        </div>
+
+
+                        {# TEXT #}
+                        <div
+                            class="md:pt-12
+               order-2 md:order-2
+               rtl:md:order-1"
+                        >
+                            <div class="flex items-start gap-3 ps-6">
+                                <div>
+                                    <p class="text-accent text-3xl">◗</p>
+
+                                    <h3
+                                        class="font-serif text-3xl sm:text-3xl
+                           leading-tight whitespace-pre-line"
+                                    >{{ 'home.why_choose_us.global_quality.title'|trans }}</h3>
+
+                                    <p
+                                        class="mt-2 sm:text-sm
+                           leading-relaxed
+                           text-primary/75 max-w-xs
+                           whitespace-pre-line"
+                                    >{{ 'home.why_choose_us.global_quality.description'|trans }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+
+
+
+                    {# ==================================================
+               BENEFIT 3
+        
+               ================================================== #}
+
+                    <article
+                        class="grid grid-cols-1 md:grid-cols-2
+           gap-8 md:gap-14
+           items-center"
+                    >
+
+                        {# IMAGE #}
+                        <div
+                            class="flex justify-center
+               md:justify-start
+               rtl:md:justify-end
+               order-1 md:order-2
+               rtl:md:order-1"
+                        >
+                            <img
+                                src="/images/creative-5.jpeg"
+                                alt="Content built to convert"
+                                class="w-[68%] sm:w-[55%] md:w-full
+                   max-w-[360px]
+                   aspect-[4/5]
+                   object-cover"
+                            >
+                        </div>
+
+
+                        {# TEXT #}
+                        <div
+                            class="order-2 md:order-1
+               rtl:md:order-2"
+                        >
+                            <div class="flex items-start gap-3 ps-6">
+                                <div>
+                                    <p class="text-accent text-3xl">◗</p>
+
+                                    <h3
+                                        class="font-serif text-3xl sm:text-3xl
+                           leading-tight whitespace-pre-line"
+                                    >{{ 'home.why_choose_us.built_to_convert.title'|trans }}</h3>
+
+                                    <p
+                                        class="mt-2 sm:text-sm
+                           leading-relaxed
+                           text-primary/75 max-w-xs
+                           whitespace-pre-line"
+                                    > {{ 'home.why_choose_us.built_to_convert.description'|trans }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        {# ============================================================
+       FINAL CTA
+       ============================================================ #}
+
+        <section class="bg-primary text-background-light">
+
+            <div class="max-w-7xl mx-auto">
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2
+                        min-h-[620px] sm:min-h-[680px]"
+                >
+
+                    {# Image #}
+                    <div class="min-h-[320px] md:min-h-full">
+
+                        <img
+                            src="/images/creative-6.jpeg"
+                            alt="Mini Soleil production"
+                            class="w-full h-full object-cover"
+                        >
+
+                    </div>
+
+
+                    {# CTA content #}
+                    <div
+                        class="flex flex-col justify-center
+                            px-8 sm:px-14 lg:px-20
+                            py-16 md:py-20"
+                    >
+
+                        <p
+                            class="text-sm
+                              uppercase tracking-[0.18em]
+                              text-background-light/70 mb-5"
+                        >
+
+                            {{ 'home.final_cta.eyebrow'|trans }}
+
+                        </p>
+
+                        <h2
+                            class="font-serif
+                               text-5xl sm:text-6xl lg:text-7xl
+                               leading-[0.9] whitespace-pre-line"
+                        >{{ 'home.final_cta.title'|trans }}</h2>
+
+
+                        <p
+                            class="max-w-xs
+                              mt-8
+                              text-sm
+                              leading-relaxed
+                              text-background-light/75"
+                        >{{ 'home.final_cta.description'|trans }}</p>
+
+
+                        <a
+                            href="{{ path('contact') }}"
+                            class="group inline-flex items-center gap-3
+                               mt-7 w-fit
+                                sm:text-sm
+                               tracking-wide"
+                        >
+
+                            <span
+                                class="w-7 h-7
+                                     rounded-full
+                                     border border-background-light/60
+                                     flex items-center justify-center
+                                     group-hover:bg-background-light
+                                     group-hover:text-primary
+                                     transition"
+                            >
+
+                                {{ 'home.final_cta.arrow'|trans }}
+
+                            </span>
+
+                            {{ 'home.final_cta.cta'|trans }}
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+{% endblock %}

@@ -1,0 +1,280 @@
+welcome.title: "Agence Mini Soleil"
+footer.copyright: "Tous droits réservés."
+
+nav:
+  home: "Accueil"
+  contact: "Contact"
+  menu: "Ouvrir le menu"
+  language: "Langue"
+  legal: "Mentions légales"
+
+home:
+    page_title: "Mini Soleil — Agence de production créative"
+
+    hero:
+        eyebrow: "Nous vous connectons aux"
+        title:
+            first_line:
+                "meilleurs"
+            accent:
+                "talents"
+            second_line:
+                "d'Europe"
+        description: |
+            Pour donner vie à votre vision,
+            avec simplicité et élégance.
+        cta: "Réserver votre shooting →"
+        editorial: "Direction artistique • Photographie • Vidéographie • Stylisme • UGC"
+        image_alt: "Production créative Mini Soleil"
+
+    introduction:
+        text: |
+            Mini Soleil est une agence de production
+            créative qui imagine des expériences
+            visuelles premium pour les marques ambitieuses.
+        image_alt: "Production créative"
+
+    create_more:
+        title: |
+            Nous
+            créons
+            plus que
+            du
+            contenu.
+        description: |
+            Du concept à la livraison finale,
+            nous réunissons les talents créatifs
+            d'Europe pour produire des images
+            authentiques, premium et
+            commercialement percutantes.
+        image_alt: "Photographie créative"
+
+    why_choose_us:
+        eyebrow: "Tout ce dont votre marque a besoin"
+        title: "Pourquoi nous choisir ?"
+
+        save_time:
+            title: |
+                Gagnez
+                du temps
+            description: |
+                De la direction créative et des moodboards
+                à la production, au stylisme, à la photographie
+                et au montage, nous gérons l'ensemble
+                du processus pour vous permettre de
+                vous concentrer sur votre activité.
+            image_alt: "Gagnez du temps avec Mini Soleil"
+
+        global_quality:
+            title: |
+                Une qualité
+                internationale
+            description: |
+                Accédez aux meilleurs professionnels
+                créatifs d'Europe sans passer
+                des mois à trouver la bonne équipe.
+            image_alt: "Talents créatifs européens"
+
+        built_to_convert:
+            title: |
+                Pensé
+                pour
+                convertir
+            description: |
+                De belles images ne sont qu'une partie
+                de l'équation. Chaque image et chaque vidéo
+                sont conçues pour transmettre votre marque
+                et engager votre audience.
+            image_alt: "Contenu conçu pour convertir"
+
+    final_cta:
+        eyebrow: "Votre prochaine production commence ici"
+        title: |
+            Prête
+            à
+            faire rayonner
+            votre
+            marque ?
+        description: |
+            Créons des visuels qui rendent
+            votre marque inoubliable.
+        cta: "Réserver votre projet"
+        arrow:  "→"
+        image_alt: "Production Mini Soleil"
+
+
+contact:
+  page_title: "Contact"
+  get_in_touch: "Contactez-nous"
+  tell_us_about: "Parlez-nous de votre"
+  vision: "vision"
+  intro: "Partagez quelques détails et nous vous mettrons en relation avec l'équipe créative la plus adaptée à votre projet."
+
+
+quote_request:
+    title: "Parlez-nous de votre projet"
+    description: "Les informations fournies nous permettent de préparer un devis précis."
+    your_details: "Vos informations"
+    project_details: "Détails du projet"
+    product_details: "Détails du produit"
+    creative_vision: "Vision créative"
+    fields:
+        full_name: "Nom complet"
+        phone_number: "Numéro de téléphone"
+        email: "E-mail"
+
+        shoot_type:
+            label: "Souhaitez-vous une séance photo personnelle ou adaptée à votre marque ?"
+            choices:
+                personal: "Personnel"
+                brand: "Marque"
+
+        brand_name:
+            label: "Nom de la marque"
+
+        instagram_account:
+            label: "Compte Instagram"
+
+        contact_preference:
+            label: "Comment préférez-vous être contacté(e) ?"
+            choices:
+                email: "E-mail"
+                whatsapp: "WhatsApp"
+
+        media_type:
+            label: "Êtes-vous intéressé(e) par une production photo ou vidéo ?"
+            choices:
+                photos: "Photos"
+                videos: "Vidéos"
+                both: "Les deux"
+
+        content_quantity:
+            label: "Combien de photos / vidéos souhaitez-vous pour votre projet ?"
+            help: "3 photos, 5 videos, 10 photos horizontal…"
+
+        number_of_items:
+            label: "Combien d’articles souhaitez-vous photographier ou filmer ?"
+            help: "5 vêtements, 10 produits de beauté…"
+
+        product_type:
+            label: "Quel type de produits votre marque propose-t-elle ?"
+            help: "Vêtements, produits de beauté / soins, accessoires, autres…"
+
+        creative_description:
+            label: "Veuillez décrire le type de photos ou de vidéos que vous souhaitez pour votre marque, notamment l’atmosphère, le lieu et les émotions recherchés."
+            help: "Ces informations nous aideront à vous proposer la meilleure direction artistique et les visuels les plus adaptés à votre projet."
+
+        start_date:
+            label: "Quand souhaitez-vous commencer ?"
+
+    submit: "Réserver votre shooting"
+
+
+login:
+  page_title: "Connexion"
+  welcome_back: "Bon retour"
+  good_to: "Ravi de"
+  see_you: "vous revoir"
+  your_details: "Vos informations"
+  logged_in_as: "Vous êtes connecté(e) en tant que"
+  logout: "Déconnexion"
+  email: "Adresse e-mail"
+  email_placeholder: "vous@exemple.com"
+  password: "Mot de passe"
+  password_placeholder: "Saisissez votre mot de passe"
+  sign_in: "Se connecter"
+  no_account: "Vous n'avez pas de compte ?"
+  create_account: "Créer un compte"
+  forgot_password: "Mot de passe oublié ?"
+
+register: 
+    page_title: "Créer un compte" 
+    join_us: "Rejoignez-nous" 
+    create_your: "Créez votre" 
+    account: "compte" 
+    email: "Adresse e-mail"
+    your_details: "Vos informations" 
+    password: "Mot de passe" 
+    confirm_password: 'Confirmer le mot de passe'
+    create_account: "Créer un compte" 
+    already_account: "Vous avez déjà un compte ?" 
+    sign_in: "Se connecter"
+
+
+reset:
+    request_title: "Mot de passe oublié ?"
+    eyebrow: "Mini Soleil Agency"
+    forgot_title: "Mot de passe"
+    forgot_highlight: "oublié ?"
+    request_description: "Pas d'inquiétude. Saisissez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe."
+    your_details: "Vos informations"
+    email: "Adresse e-mail"
+    email_placeholder: "Saisissez votre adresse e-mail"
+    request_help: "Si un compte existe avec cette adresse, nous vous enverrons un lien sécurisé."
+    send_email: "Envoyer le lien"
+    back_to_login: "Retour à la connexion"
+
+    new_password_title: "Nouveau mot de passe"
+    new_title: "Créer un"
+    new_highlight: "nouveau mot de passe"
+    new_description: "Choisissez un nouveau mot de passe pour accéder à votre compte en toute sécurité."
+    new_password: "Nouveau mot de passe"
+    password_placeholder: "Saisissez votre nouveau mot de passe"
+    reset_password: "Réinitialiser le mot de passe"
+    confirm_password: "Confirmer le mot de passe"
+    confirm_password_placeholder: "Saisissez à nouveau votre mot de passe"
+
+    email_sent_title: "E-mail de réinitialisation envoyé"
+    email_sent_heading: "Vérifiez"
+    email_sent_highlight: "votre boîte mail"
+    check_email: "Confirmation par e-mail"
+    email_sent_message: "Si un compte correspondant à votre adresse e-mail existe, un message contenant un lien de réinitialisation vient de vous être envoyé."
+    link_expires: "Expiration du lien"
+    check_spam: "Si vous ne recevez pas d'e-mail, vérifiez vos courriers indésirables ou réessayez."
+    try_again: "Réessayer"
+
+legal:
+  title: "Mentions légales"
+  updated: "Dernière mise à jour : 15 octobre 2026"
+  sections:
+    publisher:
+      title: "Éditeur du site"
+      content: |-
+        Dénomination sociale : [à compléter]
+        Forme juridique : [à compléter]
+        Siège social : [adresse complète]
+        SIREN / SIRET : [à compléter]
+        Directeur de la publication : [nom]
+        Contact : [adresse e-mail professionnelle]
+    hosting:
+      title: "Hébergement"
+      content: |-
+        Le site est actuellement en développement dans un environnement local.
+        Lors de sa mise en ligne, les coordonnées de l'hébergeur seront indiquées ici.
+    intellectual_property:
+      title: "Propriété intellectuelle"
+      content: |-
+        Les textes, photographies, graphismes, logos et autres éléments du site sont protégés par les règles applicables en matière de propriété intellectuelle. Toute utilisation non autorisée est interdite, sous réserve des exceptions légales et des droits des tiers.
+    liability:
+      title: "Responsabilité"
+      content: |-
+        Mini Soleil s'efforce de maintenir les informations du site exactes et à jour. Des erreurs ou omissions peuvent toutefois survenir.
+    personal_data:
+      title: "Données personnelles"
+      content: |-
+        Les données transmises via le formulaire de demande de devis sont utilisées pour étudier et gérer les demandes et communiquer avec les personnes concernées.
+        Responsable du traitement : [identité légale]
+        Contact pour les données personnelles : [adresse e-mail]
+        Base légale, durée de conservation, destinataires et modalités d'exercice des droits : [à préciser selon le traitement réel].
+        Vous pouvez également introduire une réclamation auprès de la CNIL.
+    cookies:
+      title: "Cookies et traceurs"
+      content: |-
+        Le site n'intègre actuellement aucun outil d'analyse d'audience ni de suivi publicitaire, selon la configuration connue du projet. Les cookies et services réellement utilisés devront être vérifiés avant la mise en ligne.
+    law:
+      title: "Droit applicable"
+      content: |-
+        Les présentes mentions légales sont soumises au droit français, sous réserve des règles impératives applicables.
+        
+  intro: "Informations légales concernant Mini Soleil et l’utilisation de ce site."
+  footer: "Création avec soin."

@@ -1,0 +1,201 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'register.page_title'|trans }}
+{% endblock %}
+
+{% block body %}
+	<main class="min-h-screen bg-primary flex items-center justify-center px-4 py-10 sm:py-14 font-sans">
+
+		<div
+			class="w-full max-w-md">
+
+			{# HEADER #}
+			<header class="text-center mb-8 sm:mb-10">
+
+				<span class="inline-block text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+					{{ 'register.join_us'|trans }}
+				</span>
+
+				<h1 class="font-serif text-4xl sm:text-5xl text-background-light leading-tight">
+					{{ 'register.create_your'|trans }}
+					<span class="italic text-accent">
+						{{ 'register.account'|trans }}
+					</span>
+				</h1>
+
+			</header>
+
+
+			{# FORM CARD #}
+			<section
+				class="bg-background rounded-2xl shadow-xl p-6 sm:p-8 md:p-10">
+
+				{# SECTION TITLE #}
+				<div class="flex items-center gap-3 mb-8">
+
+					<span class="w-2 h-2 rotate-45 bg-accent shrink-0"></span>
+
+					<h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-primary">
+						{{ 'register.your_details'|trans }}
+					</h2>
+
+					<span class="h-px flex-1 bg-primary/10"></span>
+
+				</div>
+
+
+				{# EMAIL VERIFICATION ERRORS #}
+				{% for flash_error in app.flashes('verify_email_error') %}
+					<div class="mb-5 rounded-lg border border-secondary/30
+																	bg-secondary/10 px-4 py-3 text-sm text-secondary" role="alert">
+						{{ flash_error }}
+					</div>
+				{% endfor %}
+
+
+				{# GENERAL FORM ERRORS #}
+				<div class="text-sm text-secondary">
+					{{ form_errors(registrationForm) }}
+				</div>
+
+
+				{{ form_start(registrationForm, {
+                    attr: {
+                        class: 'space-y-6'
+                    }
+                }) }}
+
+
+				{# EMAIL #}
+				<div>
+
+					{{ form_label(registrationForm.email, 'register.email'|trans, {
+                        label_attr: {
+                            class: 'block text-xs font-semibold tracking-wide uppercase text-primary/70 mb-2'
+                        }
+                    }) }}
+
+					{{ form_widget(registrationForm.email, {
+                        attr: {
+                            dir: 'auto',
+                            autocomplete: 'email',
+                            class: 'w-full min-w-0 rounded-lg border border-primary/15
+                                   bg-background-light px-4 py-3 text-primary
+                                   placeholder:text-primary/30
+                                   focus:border-secondary focus:ring-2
+                                   focus:ring-secondary/30 focus:outline-none
+                                   transition'
+                        }
+                    }) }}
+
+					<div class="mt-1 text-sm text-secondary">
+						{{ form_errors(registrationForm.email) }}
+					</div>
+
+				</div>
+
+
+				{# PASSWORD #}
+				<div>
+
+					{{ form_label(registrationForm.plainPassword.first, 'register.password'|trans, {
+        label_attr: {
+            class: 'block text-xs font-semibold tracking-wide uppercase text-primary/70 mb-2'
+        }
+    }) }}
+
+					{{ form_widget(registrationForm.plainPassword.first, {
+        attr: {
+            dir: 'auto',
+            autocomplete: 'new-password',
+            class: 'w-full min-w-0 rounded-lg border border-primary/15
+                   bg-background-light px-4 py-3 text-primary
+                   placeholder:text-primary/30
+                   focus:border-secondary focus:ring-2
+                   focus:ring-secondary/30 focus:outline-none
+                   transition'
+        }
+    }) }}
+
+					<div class="mt-1 text-sm text-secondary">
+						{{ form_errors(registrationForm.plainPassword.first) }}
+					</div>
+
+				</div>
+
+
+				<div class="mt-5">
+
+					{{ form_label(registrationForm.plainPassword.second, 'register.confirm_password'|trans, {
+        label_attr: {
+            class: 'block text-xs font-semibold tracking-wide uppercase text-primary/70 mb-2'
+        }
+    }) }}
+
+					{{ form_widget(registrationForm.plainPassword.second, {
+        attr: {
+            dir: 'auto',
+            autocomplete: 'new-password',
+            class: 'w-full min-w-0 rounded-lg border border-primary/15
+                   bg-background-light px-4 py-3 text-primary
+                   placeholder:text-primary/30
+                   focus:border-secondary focus:ring-2
+                   focus:ring-secondary/30 focus:outline-none
+                   transition'
+        }
+    }) }}
+
+					<div class="mt-1 text-sm text-secondary">
+						{{ form_errors(registrationForm.plainPassword.second) }}
+					</div>
+
+					{# Password mismatch error #}
+					<div class="mt-1 text-sm text-secondary">
+						{{ form_errors(registrationForm.plainPassword) }}
+					</div>
+
+				</div>
+
+
+				{# SUBMIT #}
+				<div class="pt-2">
+
+					<button type="submit" class="w-full inline-flex items-center justify-center
+																																			bg-secondary hover:bg-accent-dark
+																																			text-background-light font-semibold text-sm
+																																			tracking-wide py-3.5 px-8 rounded-full
+																																			transition duration-200 cursor-pointer
+																																			focus:outline-none focus:ring-2
+																																			focus:ring-accent focus:ring-offset-2
+																																			focus:ring-offset-background">
+						{{ 'register.create_account'|trans }}
+					</button>
+
+				</div>
+
+
+				{{ form_end(registrationForm) }}
+
+
+				{# LOGIN LINK #}
+				<div class="mt-8 pt-6 border-t border-primary/10 text-center">
+
+					<p class="text-sm text-primary/70">
+
+						{{ 'register.already_account'|trans }}
+
+						<a href="{{ path('app_login') }}" class="font-semibold text-secondary hover:text-primary transition">
+							{{ 'register.sign_in'|trans }}
+						</a>
+
+					</p>
+
+				</div>
+
+			</section>
+
+		</div>
+
+	</main>
+{% endblock %}

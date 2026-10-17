@@ -1,0 +1,82 @@
+<footer
+	class="bg-primary text-background-light"
+>
+
+	{# ---------- MAIN FOOTER ---------- #}
+
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+
+		<div
+			class="flex flex-col md:flex-row
+								                   items-center md:items-center
+								                   justify-between
+								                   gap-6"
+		>
+
+			{# ---------- BRAND ---------- #}
+
+			<a href="{{ path('home') }}" class="font-serif text-xl sm:text-2xl tracking-wide">
+				Mini Soleil<span class="text-accent">.</span>
+			</a>
+
+
+			{# ---------- NAVIGATION ---------- #}
+
+			<nav class="flex items-center gap-6 sm:gap-8">
+
+				<a
+					href="{{ path('home') }}"
+					class="text-sm text-background-light/70
+												                           hover:text-accent transition duration-200"
+				>
+					{{ 'nav.home'|trans }}
+				</a>
+
+				<a
+					href="{{ path('contact') }}"
+					class="text-sm text-background-light/70
+												                           hover:text-accent transition duration-200"
+				>
+					{{ 'nav.contact'|trans }}
+				</a>
+				<a
+					href="{{ path('app_legal') }}"
+					class="text-sm text-background-light/70
+												                           hover:text-accent transition duration-200"
+				>
+					{{ 'nav.legal'|trans }}
+				</a>
+
+
+			</nav>
+
+		</div>
+
+
+		{# ---------- DIVIDER ---------- #}
+
+		<div class="h-px bg-background-light/10 my-8"></div>
+
+
+		{# ---------- COPYRIGHT ---------- #}
+
+		<div
+			class="flex flex-col sm:flex-row
+								                   items-center justify-between
+								                   gap-3
+								                   text-xs text-background-light/50"
+		>
+
+			<p>
+				©
+				{{ "now"|date("Y") }}
+				Mini Soleil.
+				{{ 'footer.copyright'|trans }}
+			</p>
+
+
+		</div>
+
+	</div>
+
+</footer>

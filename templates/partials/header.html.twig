@@ -1,0 +1,138 @@
+<header class="bg-primary text-background-light relative z-50">
+	<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5">
+		<div
+			class="flex items-center justify-between gap-6"
+		>
+
+			{# Logo #}
+			<a href="{{ path('home') }}" class="shrink-0 font-serif text-2xl sm:text-3xl font-semibold tracking-tight">
+				Mini Soleil<span class="text-accent">.</span>
+			</a>
+
+			{# Desktop navigation #}
+			<div class="hidden md:flex items-center gap-6 lg:gap-8">
+
+				<a href="{{ path('home') }}" class="text-sm font-medium text-background-light/80 hover:text-accent transition">
+					{{ 'nav.home'|trans }}
+				</a>
+
+				<a href="{{ path('contact') }}" class="text-sm font-medium text-background-light/80 hover:text-accent transition">
+					{{ 'nav.contact'|trans }}
+				</a>
+
+				{# Language switcher #}
+				<details class="relative">
+					<summary
+						class="list-none cursor-pointer flex items-center gap-2
+														                               text-sm font-medium text-background-light/80
+														                               hover:text-accent transition"
+					>
+						{{ app.request.locale|upper }}
+
+						<svg class="w-4 h-4" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2">
+							<path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+						</svg>
+					</summary>
+
+					<div
+						class="absolute end-0 top-full mt-3 w-32
+														                               bg-background rounded-xl shadow-xl
+														                               p-2"
+					>
+						<a
+							href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({_locale: 'en'})) }}"
+							class="block rounded-lg px-3 py-2 text-sm
+																                                   {% if app.request.locale == 'en' %}
+																                                       bg-primary/10 text-primary font-semibold
+																                                   {% else %}
+																                                       text-primary/70 hover:bg-primary/10 hover:text-primary
+																                                   {% endif %}
+																                                   transition"
+						>
+							English
+						</a>
+
+						<a
+							href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({_locale: 'fr'})) }}"
+							class="block rounded-lg px-3 py-2 text-sm
+																                                   {% if app.request.locale == 'fr' %}
+																                                       bg-primary/10 text-primary font-semibold
+																                                   {% else %}
+																                                       text-primary/70 hover:bg-primary/10 hover:text-primary
+																                                   {% endif %}
+																                                   transition"
+						>
+							Français
+						</a>
+
+						<a
+							href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({_locale: 'ar'})) }}"
+							class="block rounded-lg px-3 py-2 text-sm
+																                                   {% if app.request.locale == 'ar' %}
+																                                       bg-primary/10 text-primary font-semibold
+																                                   {% else %}
+																                                       text-primary/70 hover:bg-primary/10 hover:text-primary
+																                                   {% endif %}
+																                                   transition"
+						>
+							العربية
+						</a>
+					</div>
+				</details>
+			</div>
+
+			{# Mobile menu #}
+			<details class="md:hidden relative">
+				<summary
+					class="list-none cursor-pointer
+										                           text-background-light hover:text-accent transition"
+					aria-label="{{ 'nav.menu'|trans }}"
+				>
+					<svg class="w-6 h-6" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+					</svg>
+				</summary>
+
+				<div
+					class="absolute end-0 top-full mt-3
+												                           w-56 bg-background rounded-xl shadow-xl p-3"
+				>
+					<a
+						href="{{ path('home') }}"
+						class="block rounded-lg px-3 py-2.5
+														                               text-primary hover:bg-primary/10 transition"
+					>
+						{{ 'nav.home'|trans }}
+					</a>
+
+					<a
+						href="{{ path('contact') }}"
+						class="block rounded-lg px-3 py-2.5
+														                               text-primary hover:bg-primary/10 transition"
+					>
+						{{ 'nav.contact'|trans }}
+					</a>
+
+					<div class="my-2 h-px bg-primary/10"></div>
+
+					<p class="px-3 pt-1 pb-2 text-xs font-semibold uppercase tracking-wider text-primary/50">
+						{{ 'nav.language'|trans }}
+					</p>
+
+					<a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({_locale: 'en'})) }}" class="block rounded-lg px-3 py-2.5 text-primary hover:bg-primary/10 transition">
+						English
+					</a>
+
+					<a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({_locale: 'fr'})) }}" class="block rounded-lg px-3 py-2.5 text-primary hover:bg-primary/10 transition">
+						Français
+					</a>
+
+					<a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')|merge({_locale: 'ar'})) }}" class="block rounded-lg px-3 py-2.5 text-primary hover:bg-primary/10 transition">
+						العربية
+					</a>
+				</div>
+			</details>
+
+		</div>
+	</nav>
+</header>

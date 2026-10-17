@@ -1,0 +1,14 @@
+{% if field.value is not empty %}
+	{% for model in field.value %}
+		{% set modelDetailUrl = ea_url()
+            .setController('App\\Controller\\Admin\\ModelsCrudController')
+            .setAction(constant('EasyCorp\\Bundle\\EasyAdminBundle\\Config\\Action::DETAIL'))
+            .setEntityId(model.id)
+        %}
+		<a href="{{ modelDetailUrl }}" style="display: block">
+			{{ model.name }}
+		</a>
+	{% endfor %}
+{% else %}
+	No models assigned to this project.
+{% endif %}

@@ -1,0 +1,14 @@
+{% if field.value is not empty %}
+	{% for teamMember in field.value %}
+		{% set teamMemberDetailUrl = ea_url()
+            .setController('App\\Controller\\Admin\\TeamMembersCrudController')
+            .setAction(constant('EasyCorp\\Bundle\\EasyAdminBundle\\Config\\Action::DETAIL'))
+            .setEntityId(teamMember.id)
+        %}
+		<a href="{{ teamMemberDetailUrl }}" style="display: block">
+			{{ teamMember.name }}
+		</a>
+	{% endfor %}
+{% else %}
+	No team members assigned to this project.
+{% endif %}

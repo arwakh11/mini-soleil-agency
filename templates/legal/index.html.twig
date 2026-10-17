@@ -1,0 +1,139 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'legal.title'|trans }} | Mini Soleil
+{% endblock %}
+
+{% block body %}
+
+    <main
+        class="min-h-screen bg-primary px-4 py-10 sm:py-14 font-sans"
+        dir="{{ app.request.locale starts with 'ar' ? 'rtl' : 'ltr' }}"
+    >
+
+        <div class="w-full max-w-3xl mx-auto">
+
+            {# PAGE INTRO #}
+
+            <header class="text-center mb-8 sm:mb-10">
+
+                <span
+                    class="inline-block text-accent text-xs font-semibold
+                           tracking-[0.2em] uppercase mb-4"
+                >
+                    Mini Soleil
+                </span>
+
+                <h1
+                    class="font-serif text-4xl sm:text-5xl
+                           text-background-light leading-tight"
+                >
+                    {{ 'legal.title'|trans }}
+                </h1>
+
+                <p
+                    class="text-background-light/70 mt-4
+                           max-w-xl mx-auto text-sm sm:text-base
+                           leading-relaxed"
+                >
+                    {{ 'legal.intro'|trans }}
+                </p>
+
+                <p class="mt-5 text-xs text-background-light/50">
+                    {{ 'legal.updated'|trans }}
+                </p>
+
+            </header>
+
+
+            {# LEGAL CONTENT CARD #}
+
+            <div
+                class="w-full bg-background rounded-2xl
+                       shadow-xl p-6 sm:p-8 md:p-10"
+            >
+
+                {% set sections = [
+                    'publisher',
+                    'hosting',
+                    'intellectual_property',
+                    'liability',
+                    'personal_data',
+                    'cookies',
+                    'law'
+                ] %}
+
+                {% for section in sections %}
+
+                    <section
+                        id="{{ section }}"
+                        class="{{ not loop.first ? 'pt-8 sm:pt-10' : '' }}
+                               "
+                    >
+
+                        {# SECTION HEADING #}
+
+                        <div class="flex items-center gap-3">
+
+                            <span
+                                class="w-2 h-2 rotate-45 bg-accent shrink-0"
+                            ></span>
+
+                            <h2
+                                class="text-xs sm:text-sm font-semibold
+                                       tracking-[0.15em] uppercase
+                                       text-primary"
+                            >
+                                {{ ('legal.sections.' ~ section ~ '.title')|trans }}
+                            </h2>
+
+                            <span class="h-px flex-1 bg-primary/10"></span>
+
+                        </div>
+
+
+                        {# SECTION CONTENT #}
+
+                        <div
+                            class="text-sm sm:text-base leading-8
+                                   text-primary/75 whitespace-pre-line
+                                   break-words"
+                        >
+                            {{ ('legal.sections.' ~ section ~ '.content')|trans }}
+                        </div>
+
+                    </section>
+
+                {% endfor %}
+
+
+                {# FOOTNOTE #}
+
+                <div
+                    class="mt-8 pt-6 border-t border-primary/10
+                           flex items-center justify-between gap-4"
+                >
+
+                    <span
+                        class="text-xs font-semibold tracking-[0.2em]
+                               uppercase text-primary/50"
+                    >
+                        Mini Soleil
+                    </span>
+
+                    <span
+                        class="text-xs text-primary/50 text-end"
+                    >
+                        {{ 'legal.footer'|trans }}
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+{% endblock %}

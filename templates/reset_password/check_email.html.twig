@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ 'reset.email_sent_title'|trans }}
+{% endblock %}
+
+{% block body %}
+	<main class="min-h-screen bg-primary flex items-center justify-center px-4 py-10 sm:py-14 font-sans">
+		<div
+			class="w-full max-w-md">
+
+			{# HEADER #}
+			<header class="text-center mb-8 sm:mb-10">
+				<span class="inline-block text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+					{{ 'reset.eyebrow'|trans }}
+				</span>
+
+				<h1 class="font-serif text-4xl sm:text-5xl text-background-light leading-tight">
+					{{ 'reset.email_sent_heading'|trans }}
+					<span class="italic text-accent">
+						{{ 'reset.email_sent_highlight'|trans }}
+					</span>
+				</h1>
+			</header>
+
+			{# CONFIRMATION CARD #}
+			<section
+				class="bg-background rounded-2xl shadow-xl p-6 sm:p-8 md:p-10">
+
+				{# SECTION TITLE #}
+				<div class="flex items-center gap-3 mb-8">
+					<span class="w-2 h-2 rotate-45 bg-accent shrink-0"></span>
+
+					<h2 class="text-xs font-semibold tracking-[0.15em] uppercase text-primary">
+						{{ 'reset.check_email'|trans }}
+					</h2>
+
+					<span class="h-px flex-1 bg-primary/10"></span>
+				</div>
+
+				{# SUCCESS ICON #}
+				<div class="flex justify-center mb-6">
+					<div class="flex items-center justify-center w-16 h-16 rounded-full bg-primary/5 border border-primary/10">
+						<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-secondary" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+						</svg>
+					</div>
+				</div>
+
+				{# MESSAGE #}
+				<div class="text-center space-y-4">
+					<p class="text-sm text-primary/80 leading-relaxed">
+						{{ 'reset.email_sent_message'|trans }}
+					</p>
+
+					<div class="rounded-lg bg-primary/5 border border-primary/10 px-4 py-4">
+						<p class="text-xs font-semibold tracking-wide uppercase text-primary/60 mb-2">
+							{{ 'reset.link_expires'|trans }}
+						</p>
+
+						<p class="text-sm text-primary font-medium">
+							{{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}
+						</p>
+					</div>
+
+					<p class="text-sm text-primary/60 leading-relaxed">
+						{{ 'reset.check_spam'|trans }}
+					</p>
+				</div>
+
+				{# ACTIONS #}
+				<div class="mt-8 space-y-4">
+					<a href="{{ path('app_forgot_password_request') }}" class="w-full inline-flex items-center justify-center bg-secondary hover:bg-accent-dark text-background-light font-semibold text-sm tracking-wide py-3.5 px-8 rounded-full transition duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background">
+						{{ 'reset.try_again'|trans }}
+					</a>
+
+					<div class="text-center">
+						<a href="{{ path('app_login') }}" class="text-sm font-semibold text-secondary hover:text-primary transition">
+							{{ 'reset.back_to_login'|trans }}
+						</a>
+					</div>
+				</div>
+
+			</section>
+		</div>
+	</main>
+{% endblock %}
